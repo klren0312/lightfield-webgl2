@@ -87,6 +87,9 @@ async function loadShaders() {
   console.log('Loaded shaders');
 }
 
+/**
+ * 提取视频帧
+ */
 async function extractVideo() {
   // based on https://stackoverflow.com/questions/32699721/javascript-extract-video-frames-reliably
   const video = document.createElement('video');
@@ -142,6 +145,9 @@ async function extractVideo() {
   });
 }
 
+/**
+ * 加载平面
+ */
 function loadPlane() {
   const planeGeo = new THREE.PlaneGeometry(camsX * cameraGap, camsY * cameraGap, camsX, camsY);
   planeMat = new THREE.ShaderMaterial({
